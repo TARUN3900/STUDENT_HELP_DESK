@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student's Help Desk</title>
+    <link rel="stylesheet" type="text/css" href="../static/layout/styles/style.css">
+</head>
+{%
+    if m1 == "sucess": %}
+<script>
+alert('Login Success');
+</script>
+{% endif %}
+{%
+  if m1 == "failed": %}
+<script>
+alert('Login failed');
+</script>
+{% endif %}
+
+<body>
+    <!-- Main Header -->
+    <header class="main-header">
+        <h1>Student's Help Desk</h1>
+    </header>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+
+            <li>
+                <a href="admin.html">Admin</a>
+            </li>
+            <li>
+                <a href="faculty.html">Faculty</a>
+            </li>
+            <li>
+                <a href="student.html" class="active">Student</a>
+            </li>
+        </ul>
+    </nav>
+    <!--Registration Form-->
+    <h2 style="color: black; margin-left: 5.5in;">Sign Up</h2>
+    <div class="login" style="width: 560px; margin-top: -50px; margin-left: -2.2cm">
+        
+        <form action="/studentregact" method="post">
+            <table>
+                <tr>
+                    <td style="padding-right: 20px">
+                        <div class="input-group">
+                            <input type="text" name="username" required="">
+                            <span>Name</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input type="password" name="password" required="">
+                            <span>Password</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-right: 20px">
+                        <div class="input-group">
+                            <input type="text" name="rollno" required="">
+                            <span>Roll Number</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input type="email" name="email" required="">
+                            <span>Email</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-right: 20px">
+                        <div class="input-group">
+                            <input type="text" name="address" required="">
+                            <span>Address</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-group">
+                            <input type="text" name="mobile" id="" pattern="[0-9]{10}" required>
+                            <span>Mobile Number</span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class="input-group">
+                <input type="submit" name="" required="" value="Register" style="width:50%">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

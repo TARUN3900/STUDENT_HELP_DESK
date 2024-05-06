@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student'sHelp Desk</title>
+    <link rel="stylesheet" type="text/css" href="static/layout/styles/style.css">
+</head>
+{%
+    if m1 == "sucess": %}
+<script>
+alert('Suggestion Added Successfully');
+</script>
+{% endif %}
+{%
+  if m1 == "failed": %}
+<script>
+alert('Suggestion Adding failed');
+</script>
+{% endif %}
+
+<body>
+    <!-- Main Header -->
+    <header class="main-header">
+        <h1>Student'sHelp Desk</h1>
+    </header>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li>
+                <a href="/studenthome.html">Home</a>
+            </li>
+            <li>
+                <a href="/addcomplaints.html" >Complaint</a>
+            </li>
+            <li class="dropdown">
+                <a href="#">View</a>
+                <div class="dropdown_list">
+                    <a href="/viewnotification.html">View Notification</a>
+                    <a href="/viewotherscomplaints.html">ViewComplaints</a>
+                    <a href="/s_viewfaq.html">View FAQ'S</a>
+                </div>
+            </li>
+            <li>
+                <a href="/addsuggestion.html"class="active">Suggestion</a>
+            </li>
+            <li>
+                <a href="/student.html">Logout</a>
+            </li>
+        </ul>
+    </nav>
+ 
+    <h2 style="color: black;">Add Suggestion</h2>
+
+    <!--Login Form-->
+    <div class="login">
+       
+        <form action="/addsuggestionact" method=post>
+            <div class="input-group">
+                <input type="text" name="name" required="">
+                <span>Name</span>
+            </div>
+            <div class="input-group">
+                <textarea type="ext" name="description" required="" rows="5" cols="25"></textarea>
+                <span>Description</span>
+            </div>
+            <div class="input-group">
+                <input type="submit" name="" required="" value="Add">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

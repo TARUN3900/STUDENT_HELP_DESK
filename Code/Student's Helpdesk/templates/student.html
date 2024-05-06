@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student's Help Desk</title>
+    <link rel="stylesheet" type="text/css" href="../static/layout/styles/style.css">
+</head>
+{%
+        if m1 == "sucess": %}
+<script>
+  alert('Registration Success');
+</script>
+{% endif %}
+{%
+      if m1 == "failed": %}
+<script>
+  alert('Registration failed');
+</script>
+{% endif %}
+
+<body>
+    <!-- Main Header -->
+    <header class="main-header">
+        <h1>Student's Help Desk</h1>
+    </header>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+
+            <li>
+                <a href="admin.html">Admin</a>
+            </li>
+            <li>
+                <a href="faculty.html">Faculty</a>
+            </li>
+            <li>
+                <a href="student.html" class="active">Student</a>
+            </li>
+        </ul>
+    </nav>
+    <!--Login Form-->
+    <div class="login">
+        <h2 class="text">Sign In</h2>
+        <form method="POST" action="/studentlogact" style="margin-top: 40px;" >
+            <div class="input-group">
+                <input type="text" name="username" required="">
+                <span>Username</span>
+            </div>
+            <div class="input-group">
+                <input type="password" name="password" required="">
+                <span>Password</span>
+            </div>
+            <div class="input-group">
+                <input type="submit" name="" required="" value="Login">
+            </div>
+        </form>
+        <a href="studentreg.html">New-User Click Here....</a>
+    </div>
+    
+</body>
+
+</html>

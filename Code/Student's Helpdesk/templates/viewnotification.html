@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student's Help Desk</title>
+    <link rel="stylesheet" type="text/css" href="static/layout/styles/style.css">
+</head>
+
+<body>
+    <!-- Main Header -->
+    <header class="main-header">
+        <h1>Student's Help Desk</h1>
+    </header>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li>
+                <a href="studenthome.html">Home</a>
+            </li>
+            <li>
+                <a href="addcomplaints.html">Complaint</a>
+            </li>
+            <li>
+                <a href="addsuggestion.html">Suggestion</a>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="active">View</a>
+                <div class="dropdown_list">
+                    <a href="viewnotification.html">View Notification</a>
+                    <a href="viewotherscomplaints.html">ViewComplaints</a>
+                    <a href="s_viewfaq.html">View FAQ'S</a>
+                </div>
+            </li>
+            <li>
+                <a href="student.html">Logout</a>
+            </li>
+        </ul>
+    </nav>
+    
+   
+    
+<h1 style="text-align: center;">Notifications</h1>
+<center>
+               
+            {% if viewnotification %}
+            <table align="center" style="border-style: solid;border-collapse: collapse;margin-top:50px; text-align: center" border="1" width="40% ;">
+                
+                <tr STYLE="background-color: lightpink;font-size: 15px;">
+
+
+                    <td> Name</td>
+                    <td> Notification</td>
+                    
+                    
+
+
+                </tr>
+                {% for name,notification in viewnotification %}
+
+
+
+                <tr style="background-color: lavenderblush;">
+
+                    <td>{{name}}</td>
+                    <td>{{notification}}</td>           
+                </tr>
+
+                    {% endfor %}
+            </table>
+            {% endif %}
+</center>
+</body>
+
+</html>
