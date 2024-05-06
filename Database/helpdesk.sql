@@ -1,8 +1,4 @@
-/*
-SQLyog Community Edition- MySQL GUI v7.15 
-MySQL - 5.5.29 : Database - helpdesk
-*********************************************************************
-*/
+
 
 /*!40101 SET NAMES utf8 */;
 
