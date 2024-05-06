@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student's Help Desk</title>
+    <link rel="stylesheet" type="text/css" href="static/layout/styles/style.css">
+</head>
+{%
+    if m1 == "sucess": %}
+<script>
+alert('Login Success');
+</script>
+{% endif %}
+{%
+  if m1 == "failed": %}
+<script>
+alert('Registration failed');
+</script>
+{% endif %}
+<body>
+    <!-- Main Header -->
+    <header class="main-header">
+        <h1>Student's Help Desk</h1>
+    </header>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li>
+                <a href="facultyhome.html"  class="active">Home</a>
+            </li>
+            <li class="dropdown">
+                <a href="#">View</a>
+                <div class="dropdown_list">
+                    <a href="/fviewcomplaints.html">View Complaints</a>
+                    <a href="/viewsugg.html">View Suggestions</a>
+                    <a href="/fviewfaq.html">View FAQ'S</a>
+                </div>
+            </li>
+            <li>
+                <a href="/faculty.html">Logout</a>
+            </li>
+        </ul>
+    </nav>
+    
+   
+     <br><br><br><br><br><br><br><br><br><br>
+<center><h1 class="text1">Welcome Proffesor</h1></center>
+    
+</body>
+
+</html>

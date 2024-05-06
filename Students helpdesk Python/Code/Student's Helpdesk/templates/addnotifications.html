@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student's Help Desk</title>
+    <link rel="stylesheet" type="text/css" href="static/layout/styles/style.css">
+</head>
+{%
+    if m1 == "sucess": %}
+<script>
+alert('Notification Added Successfully');
+</script>
+{% endif %}
+{%
+  if m1 == "failed": %}
+<script>
+alert('Notification Adding failed');
+</script>
+{% endif %}
+
+<body>
+    <!-- Main Header -->
+    <header class="main-header">
+        <h1>Student's Help Desk</h1>
+    </header>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li>
+                <a href="/adminhome.html">Home</a>
+            </li>
+            
+              <li class="dropdown">
+                <a href="#"  class="active">Add</a>
+                <div class="dropdown_list">
+                   <a href="/addnotification.html">Add Notification</a>
+                <a href="/addfaqs.html">Add FAQ's</a>
+                </div>
+            </li>
+            
+            
+           
+            <li class="dropdown">
+                <a href="#">View</a>
+                <div class="dropdown_list">
+                    <a href="/aviewcomplaints.html">View Complaints</a>
+                    <a href="/aviewsugg.html">View Suggestions</a>
+                    <a href="/aviewfaq.html">View FAQ'S</a>
+                </div>
+            </li>
+            <li>
+                <a href="/admin.html">Logout</a>
+            </li>
+        </ul>
+    </nav>
+ 
+    <h2 style="color: black;">Add Notification</h2>
+
+    <!--Login Form-->
+    <div class="login">
+       
+        <form action="/addnotificationact" method=post>
+            <div class="input-group">
+                <input type="text" name="name" required="">
+                <span>Name</span>
+            </div>
+            <div class="input-group">
+                <textarea name="notification" required="" rows="5" cols="25"></textarea>
+                <span>notification</span>
+            </div>
+            <div class="input-group">
+                <input type="submit" name="" required="" value="Add">
+            </div>
+        </form>
+    </div>
+    <!-- Main Footer -->
+</body>
+
+</html>
